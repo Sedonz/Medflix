@@ -1,0 +1,1500 @@
+* {
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+    overflow-x: hidden;
+}
+
+/* START SHORTCUT CLASSESS */
+.page-wrapper {
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+button,
+button:hover,
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.no-style {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text {
+    color: #000000;
+    font-size: 13.5px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.main-btn {
+    height: 60px;
+    padding: 0 27px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 17px;
+    background: #8dc63f;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.main-btn .icon {
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+    font-size: 17.5px;
+}
+
+.main-btn.blue {
+    background: #15e6e6;
+    color: #118989;
+}
+
+.main-btn.blue:hover {
+    background: white;
+}
+
+/* END SHORTCUT CLASSESS */
+
+/* START HEADER SECTION */
+.header {
+    padding: 5px 0;
+    background: white;
+}
+
+.header .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .sign {
+    color: #1b2231;
+    font-weight: 400;
+    padding-right: 10px;
+}
+
+.header .sign span {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #8dc63f;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.header .menu {
+    font-weight: 600;
+    cursor: pointer;
+    padding-left: 15px;
+    position: relative;
+    color: #1b2231;
+    transition: all .4s ease;
+}
+
+.header .menu::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    height: 45px;
+    width: 1px;
+    background: #bdc0c6;
+    top: -13px;
+}
+
+.header .menu .icon {
+    margin-right: 7px;
+    font-size: 17px;
+    position: relative;
+    top: 1px;
+}
+
+.header .menu:hover {
+    color: #8dc63f;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+    animation: slide-down 0.7s;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+    transition: all .2s ease-in-out;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* END HEADER SECTION */
+
+/* STRAT SIDEBAR AREA */
+.sidebar-modal {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.sidebar-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-modal .sidebar-modal-inner {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    width: 340px;
+    overflow-y: auto;
+    height: 100%;
+    background-color: #ffffff;
+    transition: .7s;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sidebar-modal.active .sidebar-modal-inner {
+    right: 0;
+}
+
+.sidebar-modal .sidebar-modal-inner .close-btn {
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    top: 30px;
+    font-size: 19px;
+    transition: 0.5s;
+    color: #212529;
+    cursor: pointer;
+}
+
+.sidebar-modal .sidebar-modal-inner ul li {
+    margin: 10px 0;
+}
+
+.sidebar-modal .sidebar-modal-inner ul li a {
+    color: #1b2231;
+    transition: all .2s ease-in;
+}
+
+.sidebar-modal .sidebar-modal-inner ul li a:hover {
+    color: #8dc63f;
+}
+
+.sidebar-modal .sidebar-modal-inner ul li:first-of-type {
+    margin-top: 0;
+}
+
+.sidebar-modal .sidebar-modal-inner ul li:first-of-type {
+    margin-bottom: 0;
+}
+
+/* END SIDEBAR AREA */
+
+/* START HERO SECTION */
+.hero {
+    height: 600px;
+    background: url(../images/Background/background-lg.png) no-repeat center fixed;
+    background-size: cover;
+}
+
+.hero .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    color: #fff;
+}
+
+.hero .intro {
+    text-align: center;
+    width: 100%;
+}
+
+.hero .intro h2 {
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.hero .intro span {
+    font-weight: 500;
+    font-size: 27px;
+}
+
+.hero .intro form {
+    margin: 50px 0;
+}
+
+.hero .intro form input {
+    width: 450px;
+    height: 60px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #595959;
+}
+
+.hero .intro form .main-btn:hover {
+    background: white;
+    color: #8dc63f;
+}
+
+.hero .intro .blocks {
+    width: 100%;
+}
+
+.hero .intro .block {
+    background: white;
+    overflow: hidden;
+    padding: 30px 0;
+    border-radius: 32px;
+    text-align: center;
+    max-height: 165px;
+    transition: all .5s ease;
+}
+
+.hero .intro .block:hover {
+    box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.hero .intro .block .icon {
+    margin-bottom: 5px;
+}
+
+.hero .intro .block .icon img {
+    object-fit: cover;
+}
+
+.hero .intro .block a {
+    color: #595959;
+    font-size: 17px;
+    transition: all .5s ease;
+}
+
+.hero .intro .block:hover a {
+    color: #8dc63f;
+}
+
+/* END HERO SECTION */
+
+/* START ABOUT MEDFLIX */
+.about-medflix {
+    padding-bottom: 100px;
+    background: white;
+}
+
+.about-medflix .top-banner {
+    padding: 20px 0;
+    background: white;
+    box-shadow: 0px 10px 15px -15px #ccc;
+    margin-bottom: 90px;
+}
+
+.about-medflix .box-feat {
+    display: flex;
+    align-items: center;
+}
+
+.about-medflix .box-feat .icon {
+    background: #15e6e6;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #18b2b2;
+    font-size: 33px;
+}
+
+.about-medflix .box-feat .icon-text {
+    padding-left: 15px;
+}
+
+.about-medflix .box-feat .icon-text span {
+    display: block;
+    color: #232a39;
+    font-weight: 400;
+}
+
+.about-medflix .box-feat .icon-text span:nth-of-type(2) {
+    font-size: 13.5px;
+    margin-top: 2px;
+}
+
+.about-medflix .box-feat .icon.red {
+    background: #fc8b7c;
+    color: #cc6558;
+}
+
+.about-medflix .box-feat .icon.yellow {
+    background: #f7d82f;
+    color: #c4a914;
+}
+
+.about-medflix .medflix {
+    background: #f4f6f8;
+    border-radius: 50px;
+    position: relative;
+}
+
+.about-medflix .medflix .title {
+    padding: 60px 40px 50px;
+}
+
+.about-medflix .medflix .title h2 {
+    color: #1f2738;
+    max-width: 680px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.about-medflix .medflix .image {
+    position: absolute;
+    right: 85px;
+    bottom: -6px;
+}
+
+.about-medflix .expert-doctor {
+    padding: 60px 0;
+}
+
+.about-medflix .expert-doctor h3 {
+    font-size: 29px;
+    font-weight: 700;
+    color: #1b2231;
+    margin-bottom: 15px;
+}
+
+.about-medflix .expert-doctor .text {
+    margin-top: 8px;
+}
+
+/* END ABOUT MEDFLIX */
+
+/* START POPULAR EXAMS */
+.popular-exams {
+    background: #f4f6f8;
+    position: relative;
+    padding: 3px 0 30px;
+}
+
+.popular-exams::before {
+    transform: skewY(-6deg);
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100px;
+    top: -62px;
+    background-color: #f4f6f8;
+}
+
+.popular-exams::after {
+    transform: skewY(6deg);
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100px;
+    top: -62px;
+    background-color: #f4f6f8;
+}
+
+.popular-exams h3 {
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1b2231;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+.box-exam {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.box-exam .title {
+    background: #8dc63f;
+    padding: 15px 30px;
+    box-shadow: 2px 2px 17px #dedede91;
+    display: flex;
+    align-items: center;
+}
+
+.box-exam .title h5 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.box-exam .body {
+    padding: 30px;
+}
+
+.box-exam .body ul li {
+    position: relative;
+    margin: 15px 0;
+    color: #878d9a;
+    padding-left: 25px;
+}
+
+.box-exam .body ul li:first-of-type {
+    margin-top: 0;
+}
+
+.box-exam .body ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+.box-exam .body ul li::before {
+    content: " ";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #828282;
+    left: 0;
+    border-radius: 50%;
+    top: 47%;
+    transform: translateY(-50%);
+}
+
+.popular-exams .owl-carousel .owl-item img {
+    width: 40px;
+}
+
+.popular-exams .owl-carousel .owl-dots {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.popular-exams .owl-carousel button.owl-dot span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #828282;
+    margin: 0 8px;
+}
+
+.popular-exams .owl-carousel button.owl-dot.active span {
+    background: #8dc63f;
+    border-color: #8dc63f;
+}
+
+/* END POPULAR EXAMS */
+
+/* START FAQ SECTION */
+.faq-section {
+    padding: 70px 0;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+}
+
+.faq-section h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1b2231;
+    margin-bottom: 20px;
+}
+
+.faq-section .title .text {
+    font-size: 16px;
+    margin: auto;
+    line-height: 28px;
+}
+
+.faq-section .title .text a {
+    font-weight: 700;
+    color: #1cd32a;
+    font-size: 16px;
+}
+
+.accordion-container {
+    position: relative;
+    margin: 10px 0 30px;
+}
+
+.accordion-container .set {
+    position: relative;
+    margin-top: 15px;
+}
+
+.accordion-container .set .head {
+    display: block;
+    padding: 15px 15px;
+    text-decoration: none;
+    color: #4f5255;
+    font-weight: 500;
+    border: 1px solid #d9d9d9;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-container .set .head span {
+    font-size: 16px;
+}
+
+.accordion-container .set .head .icon {
+    color: #1d3540;
+    font-size: 17.5px;
+}
+
+.accordion-container .content2 {
+    background-color: #fff;
+    display: none;
+    padding: 10px 15px;
+}
+
+.accordion-container .content2 p {
+    color: #4f5255;
+    line-height: 1.7;
+    font-weight: 400;
+    font-size: 15px;
+}
+.accordion-container .set .head.active {
+    background-color: #8dc63f;
+    color: #fff;
+}
+
+.accordion-container .set .head.active .icon {
+    color: white;
+}
+.faq-section .main-btn:hover {
+    background: #15e6e6;
+}
+
+/* END FAQ SECTION */
+
+/* START SUBSCRIBE SECTION */
+.subscribe-section {
+    padding: 30px 0 60px;
+    text-align: center;
+}
+
+.subscribe-section h3 {
+    font-weight: 600;
+    font-size: 34px;
+    color: #1f2738;
+    margin-bottom: 10px;
+}
+
+.subscribe-section p {
+    font-weight: 400;
+    color: #1f2738;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.subscribe-section .form input {
+    width: 45%;
+    padding: 5px 25px;
+    height: 54px;
+    background: #f4f6f8;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    color: #7e96a1;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.subscribe-section .form button {
+    border-radius: 5px;
+    height: 54px;
+    border: none;
+    padding: 5px 38px;
+    margin-left: 10px;
+    font-weight: 500;
+    color: #917d12;
+    background: #f2d42d;
+    font-size: 14.5px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.subscribe-section .form button:hover {
+    color: white;
+    background: #8dc63f;
+}
+
+/* END SUBSCRIBE SECTION */
+
+/* START FOOTER AREA */
+.footer {
+    background: #f4f6f8;
+    padding: 50px 0 30px;
+}
+
+.footer .about .logo img {
+    position: relative;
+    left: -10px;
+}
+
+.footer .about .text {
+    margin-top: 10px;
+    color: #878d98;
+}
+
+.footer .about h3 {
+    font-weight: 700;
+    color: #1f2738;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.footer .about ul li {
+    margin: 10px 0;
+}
+
+.footer .about ul li a {
+    transition: all .2s ease;
+    color: #47acec;
+}
+
+.footer .about .pay:first-of-type {
+    margin-right: 7px;
+}
+
+.footer .about ul.list-social li,
+.footer .about ul.list-social li a {
+    color: #878d98;
+    transition: all .2s ease;
+}
+
+.footer .about ul.list-social li a:hover {
+    color: #8dc63f;
+}
+
+.footer .about ul.list-social li .icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.footer .about .media {
+    margin-top: 20px;
+}
+
+.footer .about .media a {
+    display: inline-flex;
+    font-size: 22px;
+    width: 50px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    background: #8dc63f;
+    margin: 0 5px;
+    transition: all .3s ease;
+}
+
+.footer .about .media a:first-of-type {
+    margin-left: 0;
+}
+
+.footer .about .media a:last-of-type {
+    margin-right: 0;
+}
+
+.footer .about .media a:hover {
+    background: #fff;
+    color: #8dc63f;
+    transform: scale(1.1);
+}
+
+/* END FOOTER AREA */
+
+/* START COPYRIGHT */
+.copyright {
+    background: #e9ebef;
+    padding: 18px 0 15px;
+    text-align: center;
+}
+
+.copyright p span {
+    font-weight: bold;
+    color: #1f2738;
+}
+
+.copyright .span {
+    font-size: 13px;
+    display: block;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.copyright .span a {
+    font-weight: 700;
+    font-size: 13px;
+    color: #2b84c4;
+}
+
+.copyright .span .icon {
+    color: #fc8b7c;
+}
+
+/* END COPYRIGHT */
+
+/* STRAT GO TOP */
+.go-top {
+    position: fixed;
+    cursor: pointer;
+    top: 50%;
+    right: 15px;
+    background-color: #8dc63f;
+    z-index: 99;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .9s;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.go-top.active {
+    top: 98%;
+    transform: translateY(-98%);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* STRAT GO TOP */
+
+/* START HERO BANNER */
+.hero-banner {
+    height: 220px;
+    background: url('../images/Background/background-lg.png') center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-banner .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+}
+
+.hero-banner .content h2 {
+    color: white;
+    font-size: 37px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+/* END HERO BANNER */
+
+/* START ABOUT PROGRAM */
+.about-program {
+    padding: 60px 0 40px;
+    background: #f4f6f8;
+}
+
+.about-program h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1b2231;
+    margin-bottom: 20px;
+}
+
+.about-program .box {
+    text-align: center;
+    color: white;
+    background: #169393;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.about-program .box .icon {
+    font-size: 30px;
+}
+
+.about-program .box h4 {
+    font-weight: 500;
+    font-size: 27px;
+}
+
+.about-program .box span {
+    font-size: 15px;
+}
+
+.about-program .box.yellow {
+    background: #e6c615;
+}
+
+.about-program .box.green {
+    background: #8dc63f;
+}
+
+.about-program .box.box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.about-program .box.box2 .icon {
+    margin-right: 20px;
+}
+
+/* END ABOUT PROGRAM */
+
+/* START EXAMS SECTION */
+.exams-section {
+    padding: 70px 0 90px;
+    background: white;
+}
+
+.exams-section h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1b2235;
+}
+
+.exams-section .panel {
+    overflow: hidden;
+    background: #f4f6f8;
+    margin-top: 30px;
+}
+
+.exams-section .panel .image {
+    overflow: hidden;
+    height: 150px;
+}
+
+.exams-section .panel .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exams-section .panel .image-text {
+    padding: 20px;
+}
+
+.exams-section .panel .image-text h6 {
+    font-weight: 700;
+    color: #1b2231;
+    font-size: 16.5px;
+}
+
+.exams-section .panel .image-text .text {
+    line-height: 23px;
+    margin: 10px 0 15px;
+}
+
+.exams-section .panel .image-text span {
+    background: #15e6e6;
+    border-radius: 30px;
+    padding: 6px 30px;
+    display: inline-block;
+    color: #15a1a1;
+    font-weight: 600;
+}
+
+/* END EXAMS SECTION */
+
+/* START WHATSAPP BANNER */
+.whatsapp-banner {
+    background: url('../images/Background/background-lg.png') center fixed;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whatsapp-banner h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 43px;
+}
+
+.whatsapp-banner h3 {
+    font-weight: 500;
+    font-size: 38px;
+}
+
+.whatsapp-banner h3 .icon {
+    font-size: 40px;
+}
+
+/* END WHATSAPP BANNER */
+
+/* START SIGN AREA */
+.sign-area {
+    padding: 80px 0;
+}
+
+.sign-area h3 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #1d3540;
+}
+
+.sign-area .box {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.sign-area .box .icon {
+    background: #15e6e6;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #18b2b2;
+    font-size: 33px;
+}
+
+.sign-area .box.red .icon {
+    background: #fc8b7c;
+    color: #cc6558;
+}
+
+.sign-area .box.yellow .icon {
+    background: #f7d82f;
+    color: #c4a914;
+}
+
+.sign-area .box .icon-text {
+    padding-left: 15px;
+}
+
+.sign-area .box .icon-text span {
+    display: block;
+    color: #232a39;
+    font-weight: 400;
+}
+
+.sign-area .box .icon-text span:nth-of-type(2) {
+    font-size: 13.5px;
+    margin-top: 2px;
+}
+
+.sign-area .sign-box {
+    border: 1px solid #f0f6f8;
+    border-radius: 10px;
+    padding: 25px 40px;
+    box-shadow: 2px 2px 30px #f9f9f9;
+}
+
+.sign-area .sign-box h3 {
+    font-weight: 600;
+    font-size: 27px;
+    color: #232a39;
+    margin-bottom: 20px;
+}
+
+.sign-area .sign-box .form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.sign-area .sign-box .form-group .star {
+    color: #8a909b;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.sign-area .sign-box .form-group input {
+    padding: 8px 5px;
+    color: #8a909b;
+    font-weight: 400;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #e6f1f6;
+    transition: all .2s ease;
+}
+
+.sign-area .sign-box .form-group input:focus {
+    border-color: #8dc63f;
+}
+
+.sign-area .sign-box .form-group .main-btn {
+    height: 50px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.sign-area .sign-box .form-group .main-btn .icon {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}
+
+.sign-area .sign-box .form-group .main-btn:hover {
+    background: #7bb32f;
+}
+
+.sign-area .sign-box a {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #44b5e8;
+}
+
+.sign-area .sign-box .span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1f2738;
+}
+
+.sign-area .sign-box .span a {
+    display: inline-block;
+}
+
+.sign-area .check {
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-area .check input {
+    display: inline !important;
+    width: auto;
+    border: none;
+    padding: 0;
+    width: auto !important;
+    margin: 0;
+    transition: all .2s ease-in;
+    border-bottom: none;
+}
+
+.sign-area .check label {
+    display: inline-block;
+    color: #8a909b;
+    margin: 0 0 0 14px;
+    font-weight: 400;
+    font-size: 13.6px;
+}
+
+.sign-area .check label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dedede;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-area .check label::after {
+    content: "";
+    width: 10px;
+    height: 5px;
+    border: none;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    display: block;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 4px;
+    top: 6.6px;
+}
+
+.sign-area .check .box {
+    opacity: 0;
+    position: relative;
+    left: 2.5px;
+    top: 1.5px;
+    cursor: pointer;
+}
+
+.box:checked + label::after {
+    border-color: white !important;
+}
+
+.box:checked + label::before {
+    background: #7bb32f !important;
+    border-color: #7bb32f !important;
+}
+
+/* END SIGN AREA */
+
+/* START MEDIA QUERY RESPONSIVE */
+@media(max-width: 768px) {
+
+    .header .logo img,
+    .footer .about .logo img {
+        max-width: 125px;
+    }
+
+    .header .sign span {
+        width: 7px;
+        height: 7px;
+    }
+
+    .main-btn {
+        height: 45px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .copyright .span,
+    .copyright .span a,
+    .copyright .span .icon {
+        font-size: 12px;
+    }
+
+    .text,
+    .box-exam .body ul li,
+    .footer .about ul li a,
+    .copyright p,
+    copyright p span,
+    .header .sign,
+    .header .menu {
+        font-size: 13px;
+    }
+
+    .main-btn .icon,
+    .hero .intro span,
+    .footer .about ul.list-social li .icon,
+    .header .menu .icon {
+        font-size: 14px;
+    }
+
+    .about-medflix .medflix .title h2,
+    .hero .intro h2,
+    .faq-section h3,
+    .about-program h3,
+    .exams-section h3,
+    .sign-area h3 {
+        font-size: 23px;
+    }
+
+    .sidebar-modal .sidebar-modal-inner {
+        width: 250px;
+    }
+
+    .hero,
+    .hero .content {
+        height: 400px;
+    }
+
+    .hero .intro form input {
+        width: 100%;
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .hero .intro form .main-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero .intro .block {
+        display: none;
+    }
+
+    .about-medflix .box-feat {
+        margin-top: 30px;
+    }
+
+    .about-medflix .top-banner {
+        padding-top: 0;
+    }
+
+    .about-medflix .box-feat .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .about-medflix .medflix .image {
+        display: none;
+    }
+
+    .about-medflix .medflix {
+        text-align: center;
+    }
+
+    .about-medflix .expert-doctor h3 {
+        font-size: 21px;
+        margin-top: 30px;
+    }
+
+    .about-medflix {
+        padding-bottom: 0;
+    }
+
+    .popular-exams::before,
+    .popular-exams::after {
+        display: none;
+    }
+
+    .popular-exams h3 {
+        font-size: 23px;
+        margin-top: 50px;
+    }
+
+    .box-exam .title h5 {
+        font-size: 17px;
+    }
+
+    .popular-exams .owl-carousel .owl-item img {
+        width: 30px;
+    }
+
+    .box-exam .body ul li::before {
+        width: 10px;
+        height: 10px;
+    }
+
+    .popular-exams .owl-carousel button.owl-dot span {
+        width: 13px;
+        height: 13px;
+    }
+
+    .faq-section .title .text,
+    .faq-section .title .text a,
+    .accordion-container .set .head span {
+        font-size: 14px;
+    }
+
+    .accordion-container .set .head .icon,
+    .subscribe-section p {
+        font-size: 15px;
+    }
+
+    .subscribe-section h3 {
+        font-size: 24px;
+    }
+
+    .subscribe-section .form input {
+        width: 100%;
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .subscribe-section .form button {
+        margin: 0;
+        margin-top: 10px;
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .footer .about h3 {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .footer .about .media a {
+        width: 35px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .go-top {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .hero-banner .content h2,
+    .about-program .box h4,
+    .about-program .box .icon {
+        font-size: 24px;
+    }
+
+    .about-program .box {
+        margin-top: 30px;
+    }
+
+    .whatsapp-banner h2 {
+        font-size: 24px;
+    }
+
+    .whatsapp-banner h3,
+    .whatsapp-banner h3 .icon {
+        font-size: 20px;
+    }
+
+    .sign-area .box .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .sign-area .sign-box {
+        margin-top: 30px;
+    }
+
+    .sign-area .sign-box h3 {
+        font-size: 22px;
+    }
+
+    .sign-area .sign-box .form-group input {
+        font-size: 13px;
+    }
+
+    .sign-area .sign-box .form-group .main-btn {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .sign-area .check label,
+    .sign-area .sign-box .form-group .main-btn .icon {
+        font-size: 13px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 992px) {
+
+    .hero,
+    .hero .content {
+        height: 750px;
+    }
+
+    .hero .intro .block {
+        margin-bottom: 30px;
+    }
+
+    .about-medflix .top-banner {
+        padding-top: 0;
+    }
+
+    .about-medflix .box-feat {
+        margin-top: 20px;
+    }
+
+    .about-medflix .medflix .image {
+        display: none;
+    }
+
+    .expert-doctor .image {
+        margin-bottom: 30px;
+    }
+
+    .about-program .text {
+        margin-bottom: 30px;
+    }
+
+    .sign-area .sign-box {
+        margin-top: 30px;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1200px) {
+    .hero .intro .block a {
+        font-size: 14px;
+    }
+
+    .box-exam .title h5 {
+        font-size: 20px;
+    }
+
+    .footer .about .media a:last-of-type {
+        margin-top: 7px;
+        margin-left: 0;
+    }
+}
+
+@media(min-width: 1500px) {
+    .about-medflix {
+        padding-bottom: 0;
+    }
+
+    .popular-exams {
+        padding-top: 60px;
+    }
+
+    .popular-exams::after,
+    .popular-exams::before {
+        display: none;
+    }
+}
+
+/* END MEDIA QUERY RESPONSIVE */
